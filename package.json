@@ -1,0 +1,43 @@
+{
+  "name": "mathex2java-translator",
+  "version": "1.0.0",
+  "description": "Transpiler to convert amsmath LaTeX code to Java.",
+  "main": "mathex2java.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francismaria/mathex2java-translator.git"
+  },
+  "keywords": [
+    "latex",
+    "mathex2java",
+    "java",
+    "transpiler",
+    "compiler",
+    "antlr4",
+    "languages",
+    "cfg"
+  ],
+  "author": "Francisco Maria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francismaria/mathex2java-translator/issues"
+  },
+  "homepage": "https://github.com/francismaria/mathex2java-translator#readme",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "antlr4": "^4.7.2"
+  }
+}
