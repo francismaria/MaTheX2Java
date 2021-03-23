@@ -1,4 +1,4 @@
-// Generated from /Users/francisco/Documents/FEUP/Projetos/COMP/Math2Code/generation/grammars/Annotation.g4 by ANTLR 4.7.1
+// Generated from /Users/francisco/Documents/Work/mathex2java-translator/src/grammars/Annotation.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class AnnotationParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -35,40 +35,49 @@ public class AnnotationParser extends Parser {
 		RULE_return_type = 4, RULE_start = 5, RULE_variable_specs = 6, RULE_new_line_declaration = 7, 
 		RULE_variables_type_declaration = 8, RULE_variables = 9, RULE_variables_type = 10, 
 		RULE_array = 11, RULE_array_dimension = 12, RULE_to_ignore = 13, RULE_end = 14;
-	public static final String[] ruleNames = {
-		"run", "method_specs", "name_spec", "return_spec", "return_type", "start", 
-		"variable_specs", "new_line_declaration", "variables_type_declaration", 
-		"variables", "variables_type", "array", "array_dimension", "to_ignore", 
-		"end"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"run", "method_specs", "name_spec", "return_spec", "return_type", "start", 
+			"variable_specs", "new_line_declaration", "variables_type_declaration", 
+			"variables", "variables_type", "array", "array_dimension", "to_ignore", 
+			"end"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'\\n'", null, null, null, null, null, null, null, null, null, null, 
-		"'\\begin'", "'\\end'", null, "'%'", "'\\exp'", "'\\frac'", "'\\sqrt'", 
-		"'\\sum'", "'\\substack'", "'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", 
-		"'\\arccos'", "'\\arctan'", "'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", 
-		"'\\ln'", "'\\int'", "'\\iint'", "'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", 
-		"'\\le'", "'\\leq'", "'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", 
-		"'\\gneqq'", "'\\geq'", "'\\geqq'", "'\\geqslant'", "'{'", "'}'", "'['", 
-		"']'", "'''", "':'", "','", "'.'", "'<'", "'<='", "'>'", "'>='", "'!'", 
-		"'&'", "'_'", "'\\\\'", "'e'", "'('", "')'", "'^'", "'='", "'+'", "'-'", 
-		null, "'/'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, "REAL", "SHORT", "INT", "FLOAT", "DOUBLE", "LONG", "NAME_TAG", 
-		"RETURN_TAG", "VARNAME", "INTEGER", "BEGIN_TAG", "END_TAG", "NEWLINE_TAG", 
-		"COMMENT_TAG", "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", 
-		"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
-		"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
-		"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", "LEQQ_TAG", 
-		"LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", 
-		"GEQSLANT_TAG", "CURLY_LF", "CURLY_RT", "BRACKET_LF", "BRACKET_RT", "SINGLE_QUOTE_TAG", 
-		"COLON_TAG", "COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", 
-		"GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", 
-		"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "PARENTHESIS_LF", "PARENTHESIS_RT", 
-		"HAT", "EQUAL", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "ENVIRONMENT_IGNORE", 
-		"WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'\\n'", null, null, null, null, null, null, null, null, null, 
+			null, "'\\begin'", "'\\end'", null, "'%'", "'\\exp'", "'\\frac'", "'\\sqrt'", 
+			"'\\sum'", "'\\substack'", "'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", 
+			"'\\arccos'", "'\\arctan'", "'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", 
+			"'\\ln'", "'\\int'", "'\\iint'", "'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", 
+			"'\\le'", "'\\leq'", "'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", 
+			"'\\gneqq'", "'\\geq'", "'\\geqq'", "'\\geqslant'", "'{'", "'}'", "'['", 
+			"']'", "'''", "':'", "','", "'.'", "'<'", "'<='", "'>'", "'>='", "'!'", 
+			"'&'", "'_'", "'\\\\'", "'e'", "'('", "')'", "'^'", "'='", "'+'", "'-'", 
+			null, "'/'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, null, "REAL", "SHORT", "INT", "FLOAT", "DOUBLE", "LONG", "NAME_TAG", 
+			"RETURN_TAG", "VARNAME", "INTEGER", "BEGIN_TAG", "END_TAG", "NEWLINE_TAG", 
+			"COMMENT_TAG", "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", 
+			"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
+			"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
+			"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", 
+			"LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", 
+			"GEQQ_TAG", "GEQSLANT_TAG", "CURLY_LF", "CURLY_RT", "BRACKET_LF", "BRACKET_RT", 
+			"SINGLE_QUOTE_TAG", "COLON_TAG", "COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", 
+			"LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", 
+			"JOIN", "UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "PARENTHESIS_LF", 
+			"PARENTHESIS_RT", "HAT", "EQUAL", "PLUS", "MINUS", "MULTIPLICATION", 
+			"DIVISION", "ENVIRONMENT_IGNORE", "WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -118,6 +127,7 @@ public class AnnotationParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class RunContext extends ParserRuleContext {
 		public TerminalNode EOF() { return getToken(AnnotationParser.EOF, 0); }
 		public List<Method_specsContext> method_specs() {

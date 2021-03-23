@@ -1,4 +1,4 @@
-// Generated from /Users/francisco/Documents/FEUP/Projetos/COMP/Math2Code/generation/grammars/Annotation.g4 by ANTLR 4.7.1
+// Generated from /Users/francisco/Documents/Work/mathex2java-translator/src/grammars/Annotation.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class AnnotationLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -38,51 +38,60 @@ public class AnnotationLexer extends Lexer {
 		"DEFAULT_MODE"
 	};
 
-	public static final String[] ruleNames = {
-		"T__0", "REAL", "REAL_TAGS", "SHORT", "SHORT_TAGS", "INT", "INT_TAGS", 
-		"FLOAT", "FLOAT_TAGS", "DOUBLE", "DOUBLE_TAGS", "LONG", "LONG_TAGS", "NAME_TAG", 
-		"NAME_TAGS", "RETURN_TAG", "RETURN_TAGS", "VARNAME", "INTEGER", "BEGIN_TAG", 
-		"END_TAG", "NEWLINE_TAG", "NEWLINE", "COMMENT_TAG", "EXP_TAG", "FRAC_TAG", 
-		"SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", "SIN_TAG", "COS_TAG", "TAN_TAG", 
-		"ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", "SINH_TAG", "COSH_TAG", "TANH_TAG", 
-		"LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", "IIINT_TAG", "LT_TAG", "LNEQ_TAG", 
-		"LNEQQ_TAG", "LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", 
-		"GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", "CURLY_LF", 
-		"CURLY_RT", "BRACKET_LF", "BRACKET_RT", "SINGLE_QUOTE_TAG", "COLON_TAG", 
-		"COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", 
-		"GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", "UNDERSCORE", "BREAKLINE", 
-		"EULER_NUMBER", "PARENTHESIS_LF", "PARENTHESIS_RT", "HAT", "EQUAL", "PLUS", 
-		"MINUS", "MULTIPLICATION", "MULTIPLICATION_TAGS", "DIVISION", "ENVIRONMENT_IGNORE", 
-		"WS"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"T__0", "REAL", "REAL_TAGS", "SHORT", "SHORT_TAGS", "INT", "INT_TAGS", 
+			"FLOAT", "FLOAT_TAGS", "DOUBLE", "DOUBLE_TAGS", "LONG", "LONG_TAGS", 
+			"NAME_TAG", "NAME_TAGS", "RETURN_TAG", "RETURN_TAGS", "VARNAME", "INTEGER", 
+			"BEGIN_TAG", "END_TAG", "NEWLINE_TAG", "NEWLINE", "COMMENT_TAG", "EXP_TAG", 
+			"FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", "SIN_TAG", "COS_TAG", 
+			"TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", "SINH_TAG", "COSH_TAG", 
+			"TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", "IIINT_TAG", 
+			"LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", 
+			"GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", 
+			"CURLY_LF", "CURLY_RT", "BRACKET_LF", "BRACKET_RT", "SINGLE_QUOTE_TAG", 
+			"COLON_TAG", "COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", 
+			"GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", 
+			"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "PARENTHESIS_LF", "PARENTHESIS_RT", 
+			"HAT", "EQUAL", "PLUS", "MINUS", "MULTIPLICATION", "MULTIPLICATION_TAGS", 
+			"DIVISION", "ENVIRONMENT_IGNORE", "WS"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'\\n'", null, null, null, null, null, null, null, null, null, null, 
-		"'\\begin'", "'\\end'", null, "'%'", "'\\exp'", "'\\frac'", "'\\sqrt'", 
-		"'\\sum'", "'\\substack'", "'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", 
-		"'\\arccos'", "'\\arctan'", "'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", 
-		"'\\ln'", "'\\int'", "'\\iint'", "'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", 
-		"'\\le'", "'\\leq'", "'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", 
-		"'\\gneqq'", "'\\geq'", "'\\geqq'", "'\\geqslant'", "'{'", "'}'", "'['", 
-		"']'", "'''", "':'", "','", "'.'", "'<'", "'<='", "'>'", "'>='", "'!'", 
-		"'&'", "'_'", "'\\\\'", "'e'", "'('", "')'", "'^'", "'='", "'+'", "'-'", 
-		null, "'/'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, null, "REAL", "SHORT", "INT", "FLOAT", "DOUBLE", "LONG", "NAME_TAG", 
-		"RETURN_TAG", "VARNAME", "INTEGER", "BEGIN_TAG", "END_TAG", "NEWLINE_TAG", 
-		"COMMENT_TAG", "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", 
-		"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
-		"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
-		"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", "LEQQ_TAG", 
-		"LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", 
-		"GEQSLANT_TAG", "CURLY_LF", "CURLY_RT", "BRACKET_LF", "BRACKET_RT", "SINGLE_QUOTE_TAG", 
-		"COLON_TAG", "COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", 
-		"GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", 
-		"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "PARENTHESIS_LF", "PARENTHESIS_RT", 
-		"HAT", "EQUAL", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "ENVIRONMENT_IGNORE", 
-		"WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'\\n'", null, null, null, null, null, null, null, null, null, 
+			null, "'\\begin'", "'\\end'", null, "'%'", "'\\exp'", "'\\frac'", "'\\sqrt'", 
+			"'\\sum'", "'\\substack'", "'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", 
+			"'\\arccos'", "'\\arctan'", "'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", 
+			"'\\ln'", "'\\int'", "'\\iint'", "'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", 
+			"'\\le'", "'\\leq'", "'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", 
+			"'\\gneqq'", "'\\geq'", "'\\geqq'", "'\\geqslant'", "'{'", "'}'", "'['", 
+			"']'", "'''", "':'", "','", "'.'", "'<'", "'<='", "'>'", "'>='", "'!'", 
+			"'&'", "'_'", "'\\\\'", "'e'", "'('", "')'", "'^'", "'='", "'+'", "'-'", 
+			null, "'/'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, null, "REAL", "SHORT", "INT", "FLOAT", "DOUBLE", "LONG", "NAME_TAG", 
+			"RETURN_TAG", "VARNAME", "INTEGER", "BEGIN_TAG", "END_TAG", "NEWLINE_TAG", 
+			"COMMENT_TAG", "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "SUBSTACK_TAG", 
+			"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
+			"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
+			"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", 
+			"LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", 
+			"GEQQ_TAG", "GEQSLANT_TAG", "CURLY_LF", "CURLY_RT", "BRACKET_LF", "BRACKET_RT", 
+			"SINGLE_QUOTE_TAG", "COLON_TAG", "COMMA_TAG", "DOT_SYMBOL", "LESSER_SYMBOL", 
+			"LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", 
+			"JOIN", "UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "PARENTHESIS_LF", 
+			"PARENTHESIS_RT", "HAT", "EQUAL", "PLUS", "MINUS", "MULTIPLICATION", 
+			"DIVISION", "ENVIRONMENT_IGNORE", "WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
