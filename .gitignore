@@ -1,0 +1,11 @@
+# MacOS hidden directories
+.DS_Store
+
+# Node dependency directories
+node_modules/
+
+# JEST coverage files
+coverage/
+
+# Webpack generated license file
+*.LICENSE.txt
