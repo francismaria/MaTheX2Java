@@ -180,12 +180,6 @@ The following technologies were used in this project:
 
 * [antlr4](https://github.com/antlr/antlr4)
 
-* [NodeJS](https://nodejs.org/en/)
-
-* [Express](https://expressjs.com)
-
-* [pug](https://pugjs.org/api/getting-started.html)
-
 * [JEST](https://jestjs.io)
 
 * [ESLint](https://eslint.org)
@@ -194,24 +188,9 @@ The following technologies were used in this project:
 
 If you'd like to contribute to the project or just want to test MaTheX2Java locally, you should follow these steps:
 
-1. Install NodeJS.
+1. Pull necessary dependencies:
 
-2. To install the necessary dependencies, open a terminal in the project folder and enter the following line:
-
-```
-$ ./INSTALL.sh
-```
-
-3. Once all the depencies are installed, enter the following line:
-
-```
-$ node app.js
-```
-
-4. Open a web browser of your choice, and enter: `http://localhost:3000`, and voilá! 
-
-You can now use MaTheX2Java as you wish!
-
+`$ npm install`
 
 ## License
 
