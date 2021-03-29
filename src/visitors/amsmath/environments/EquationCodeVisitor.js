@@ -15,11 +15,11 @@
 /* eslint-disable radix */
 
 // grammars visitors
-const AmsmathVisitor = require('../../../grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
-const AmsmathParser = require('../../../grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
+const AmsmathVisitor = require('Grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
+const AmsmathParser = require('Grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
 // symbols
-const Symbol = require('../../../structures/symbols/Symbol').Symbol;
-const SummationSymbol = require('../../../structures/symbols/SummationSymbol').SummationSymbol;
+const Symbol = require('Structures/symbols/Symbol').Symbol;
+const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationSymbol;
 // name templates
 const FACTORIAL_METHOD_TEMPLATE = 'factorial_MX2J';
 const summationMethodTemplate = 'summation_MX2J_';

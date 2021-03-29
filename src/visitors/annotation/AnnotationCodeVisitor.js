@@ -18,8 +18,8 @@
  * © Francisco Maria, 2019
  */
 
-const AnnotationVisitor = require('../../grammars/static/AnnotationGrammar/AnnotationVisitor').AnnotationVisitor;
-const Symbol = require('../../structures/symbols/Symbol').Symbol;
+const AnnotationVisitor = require('Grammars/static/AnnotationGrammar/AnnotationVisitor').AnnotationVisitor;
+const Symbol = require('Structures/symbols/Symbol').Symbol;
 
 /**
  * This class is a custom visitor for the Annotation grammar of the MatheX2Java application.

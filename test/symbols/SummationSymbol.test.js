@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 
-const SummationSymbol = require('../../src/structures/symbols/SummationSymbol').SummationSymbol;
+const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationSymbol;
 // Summation Symbol that is an argument and is not an index variable
 const testArgumentSymbol = new SummationSymbol('argVar', 'INT', true, false);
 // Summation Symbol that is not an argument and is an index variable

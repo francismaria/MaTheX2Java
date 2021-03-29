@@ -6,7 +6,7 @@
 
 /* eslint-disable */
 
-const Symbol = require('../../src/structures/symbols/Symbol').Symbol;
+const Symbol = require('Structures/symbols/Symbol').Symbol;
 // Symbol that is an argument
 const testArgumentSymbol = new Symbol('testArg', 'INT', true);
 // Symbol that is not an argument and is an multi-dimensional array (3 dims)

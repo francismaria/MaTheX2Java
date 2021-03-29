@@ -1,4 +1,4 @@
-const CompilerExecution = require('./CompilerExecution').CompilerExecution;
+const CompilerExecution = require('CompilerExecution').CompilerExecution;
 
 class CompilerExecutor {
   static getCurrentDate() {

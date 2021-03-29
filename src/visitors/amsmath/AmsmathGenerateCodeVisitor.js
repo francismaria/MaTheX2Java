@@ -8,7 +8,7 @@
 /* eslint-disable no-plusplus */
 
 // imports default visitor
-const AmsmathVisitor = require('../../grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
+const AmsmathVisitor = require('Grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
 // imports each body parser rules code generators
 const MatrixCodeGenerator = require('./environments/MatrixCodeVisitor').MatrixCodeGenerator;
 const EquationCodeGenerator = require('./environments/EquationCodeVisitor').EquationCodeGenerator;
