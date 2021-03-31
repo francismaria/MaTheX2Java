@@ -18,7 +18,7 @@ const AnnotationCodeVisitor = require('Visitors/annotation/AnnotationCodeVisitor
 const AmsmathLexer = require('Grammars/static/AmsmathGrammar/GrammarLexer').GrammarLexer;
 const AmsmathParser = require('Grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
 const AmsmathGenerateCodeVisitor = require('Visitors/amsmath/AmsmathGenerateCodeVisitor').AmsmathGenerateCodeVisitor;
-const AmsmathErrorHandler = require('Visitors/errors/AmsmathErrorHandler').AmsmathErrorListener;
+const AmsmathErrorHandler = require('Errors/AmsmathErrorHandler').AmsmathErrorListener;
 // -- Symbols Table
 const GlobalSymbolTable = require('Structures/symbolTables/GlobalSymbolTable').GlobalSymbolTable;
 

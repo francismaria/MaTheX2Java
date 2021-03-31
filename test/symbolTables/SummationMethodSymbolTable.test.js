@@ -8,7 +8,7 @@
 const SummationMethodSymbolTable = require('Structures/symbolTables/SummationMethodSymbolTable').SummationMethodSymbolTable;
 const Symbol = require('Structures/symbols/Symbol').Symbol;
 const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationSymbol;
-const InputTypeError = require('Visitors/errors/InputTypeError').InputTypeError;
+const InputTypeError = require('Errors/InputTypeError').InputTypeError;
 
 /** --------------------------
  *   TEST ADD/GET PARENT NAME

@@ -11,7 +11,7 @@
 const FACTORIAL_METHOD_TEMPLATE = 'factorial_MX2J';
 const summationMethodTemplate = 'summation_MX2J_';
 // exceptions (errors)
-const InputTypeError = require('../../visitors/errors/InputTypeError').InputTypeError;
+const InputTypeError = require('Errors/InputTypeError').InputTypeError;
 // symbol tables
 const MethodSymbolTable = require('./MethodSymbolTable').MethodSymbolTable;
 const FactorialMethodSymbolTable = require('./FactorialMethodSymbolTable').FactorialMethodSymbolTable;

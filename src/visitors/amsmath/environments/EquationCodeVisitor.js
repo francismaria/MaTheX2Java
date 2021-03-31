@@ -24,9 +24,9 @@ const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationS
 const FACTORIAL_METHOD_TEMPLATE = 'factorial_MX2J';
 const summationMethodTemplate = 'summation_MX2J_';
 // exceptions (errors)
-const CustomError = require('../../errors/CustomError').CustomError;
-const ArrayDimensionsError = require('../../errors/ArrayDimensionsError').ArrayDimensionsError;
-const ArrayIndexOutOfBoundsError = require('../../errors/ArrayIndexOutOfBoundsError').ArrayIndexOutOfBoundsError;
+const CustomError = require('Errors/CustomError').CustomError;
+const ArrayDimensionsError = require('Errors/ArrayDimensionsError').ArrayDimensionsError;
+const ArrayIndexOutOfBoundsError = require('Errors/ArrayIndexOutOfBoundsError').ArrayIndexOutOfBoundsError;
 
 /**
  * Constants to access child nodes.

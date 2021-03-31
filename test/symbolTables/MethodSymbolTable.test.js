@@ -8,7 +8,7 @@
 
 const MethodSymbolTable = require('Structures/symbolTables/MethodSymbolTable').MethodSymbolTable;
 const Symbol = require('Structures/symbols/Symbol').Symbol;
-const InputTypeError = require('Visitors/errors/InputTypeError').InputTypeError;
+const InputTypeError = require('Errors/InputTypeError').InputTypeError;
 
 // test symbol table
 const symbolTableTest = new MethodSymbolTable('equation_tests');

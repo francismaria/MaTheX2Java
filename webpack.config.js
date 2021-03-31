@@ -9,6 +9,7 @@ module.exports = {
       Grammars: path.resolve(__dirname, 'src/grammars/'),
       Visitors: path.resolve(__dirname, 'src/visitors/'),
       Structures: path.resolve(__dirname, 'src/structures/'),
+      Errors: path.resolve(__dirname, 'src/errors/'),
       Java: path.resolve(__dirname, 'src/java/'),
     },
     fallback: 
