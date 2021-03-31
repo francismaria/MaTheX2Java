@@ -1,4 +1,5 @@
 const CompilerExecution = require('CompilerExecution').CompilerExecution;
+const EmptyInputCodeError = require('Errors/EmptyInputCodeError').EmptyInputCodeError;
 
 class CompilerExecutor {
   static getCurrentDate() {
@@ -6,21 +7,33 @@ class CompilerExecutor {
     return (`${String(date.getDate())}_${String(date.getMonth() + 1)}_${String(date.getFullYear())}_${String(date.getHours())}_${String(date.getMinutes())}_${String(date.getSeconds())}`);
   }
 
-  static runner(code) {
+  static validateCode(code) {
+    if(code === '')
+      throw new EmptyInputCodeError('Code input is empty.');
+  }
+
+  static startCompilerExecution(code) {
     const fileName = getCurrentDate();
     const execution = new CompilerExecution(code, fileName);
 
+    execution.buildAnnotationParseTrees();
+    execution.walkAnnotationTree();
+    execution.buildCodeParseTrees();
+    execution.walkAmsmathTree();
+    return execution.finalize();
+  }
+
+  static runner(inputCode) {
+    let translatedCode;
+
     try {
-      execution.buildAnnotationParseTrees();
-      execution.walkAnnotationTree();
-      execution.buildCodeParseTrees();
-      execution.walkAmsmathTree();
+      this.validateCode(inputCode);
+      translatedCode = this.startCompilerExecution(inputCode);
     } catch (error) {
       console.error('An error has occured when computing translation.', error);
       throw error;
     }
-
-    return execution.finalize();
+    return translatedCode;
   }
 }
 
