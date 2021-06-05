@@ -1,16 +1,13 @@
 <h1 align="center">
-    <a href="#">MaTheX2Java</a>
+    <a href="http://mathex2java.com">MaTheX2Java</a>
 </h1> 
 
 <p align="center">
-    <a href="#"><u>Web Application</u></a>
-    <span> | </span>
     <a href="#"><u>User's Guide</u></a>
 
 </p>
 
 [![License: MIT](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-[![Build Status](https://travis-ci.org/francismaria/MaTheX2Java.svg?branch=master)](https://travis-ci.org/francismaria/MaTheX2Java)
 
 ## What is it?
 
@@ -186,11 +183,34 @@ The following technologies were used in this project:
 
 ## Development
 
-If you'd like to contribute to the project or just want to test MaTheX2Java locally, you should follow these steps:
+#### Local Setup
+
+##### Pre-Requisites
+
+1. Antlr4
+
+``
+
+If you'd like to contribute to the project or just want to test MaTheX2Java locally, please follow the below steps:
 
 1. Pull necessary dependencies:
 
 `$ npm install`
+
+#### Branches
+
+There are two main branches in this repository:
+
+- `master`: used for promotion of changes to the live environment (to our users).
+- `development`: used for aggregating changes to be pushed to `master` for deployment of a new version of the application (beta stage). Note that before pushing to master all the action items/features for a specific version must be first implemented. This however is overriden when a hotfix is to be deployed.
+
+When developing new features, bug fixes or any other change a new branch forked from `development` must be created. Ideally this should be one per issue.
+These shall follow a naming format:
+
+- `fix/<succint-name>`: used for fixing bugs or unwanted issues.
+- `dev/<succint-name>`: used for refactors and development-related issues (e.g. testing).
+- `feature/<succint-name>`: used for the implementation of features.
+
 
 ## License
 
