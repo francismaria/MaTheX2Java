@@ -10,7 +10,14 @@
   },
   "scripts": {
     "test": "jest",
+    "test-coverage": "jest -- --coverage",
     "build": "webpack"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
   },
   "repository": {
     "type": "git",
