@@ -61,11 +61,11 @@ can correctly apply the supported LaTeX rules.
 
 Below you can find two examples (both a simple and a complex one) to showcase some of the vast features this application offers and how the final translation looks like. Please address to the [examples](http://mathex2java.com/rules) page of the application for more of these.
 
-### A simple one
+#### A simple one
 
 This example presents basic functionalities of **MaTheX2Java**. In this case, it is requested the translation of a simple LaTeX equation which uses a factorial plus few other operations, including a cubic root function.
 
-- ##### LaTeX code:
+##### LaTeX code
 
 ```
 % name : example
@@ -75,7 +75,7 @@ result = (3+y)! + 7 \times 3 + z - \sqrt[3]{27}
 \end{equation}
 ```
 
-- ##### Java code:
+##### Java code
 
 ```java
 import java.lang.Math;
@@ -116,13 +116,13 @@ It can be observed that due to the *annotation features* of this application the
 
 ###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
 
-### The complex one
+#### A complex one
 
 In this example, more complex features of **MaTheX2Java** are presented: the use of summations.
 It is shown that summations as well as nested summations are supported, and it automatically casts variables when it needs to (for instance,
 in the summation index variables).
 
-- ##### LaTeX code 
+##### LaTeX code 
 
 ```
 % name : myExampleEquation
@@ -131,7 +131,7 @@ a = \sum_{i = 0}^{1000}{ \sum_{j = 0}^{N}{  \sum_{k = 2}^{1000}{ j + i + k + c }
 \end{equation}
 ```
 
-- ##### Java code
+##### Java code
 
 ```java
 import java.lang.Math;
