@@ -6,6 +6,7 @@
     <a href="#"><u>User's Guide</u></a>
 </p>
 
+![example workflow](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/francismaria/mathex2java-translator/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
