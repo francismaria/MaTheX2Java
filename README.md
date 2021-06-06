@@ -241,4 +241,4 @@ Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) for simple guidelines on h
 
 ## License
 
-This project is licensed under the GPLv2 license. Check [LICENSE](./LICENSE.md) for details.
+This project is licensed under the GPLv2 license. Check [LICENSE](./LICENSE) for details.
