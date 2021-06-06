@@ -4,46 +4,66 @@
 
 <p align="center">
     <a href="#"><u>User's Guide</u></a>
-
 </p>
 
 [![License: MIT](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-## What is it?
+## Table of Contents
 
-MaTheX2Java is a web application which converts mathematic LaTeX code to Java code, in real-time, capable of accepting
+- [Introduction](#Introduction)
+  - What is it?
+  - Who is it for?
+  - What does it offer?
+  - What does it not offer?
+- [Translation Examples](#Translation-Examples)
+  - A simple one
+  - A complex one
+- [Development Guidelines](#Development-Guidelines)
+  - Technologies Used
+	- Local Setup
+	- Contribution
+- [License](#License)
+
+-------------
+
+## Introduction
+
+### What is it?
+
+MaTheX2Java is a web application which converts mathematic LaTeX code to Java code in real-time. Is is capable of translating
 many of the well-known mathematic LaTeX formulas and covert them to fully operational, well-structured Java code. It provides
-a great flexibility due to its _annotation_ capacity, that allows to specify customizable details about how the code is generated.
+great flexibility due to its _annotation_ capacity which leverages even more the power of translation by permitting its users to customize translation details on how the code should be generated.
 
-###### Note: MatheX2Java currently compiles and generates code according to version 2.1 of the amsmath package.
+###### Note: MatheX2Java currently compiles and generates code according to [version 2.1](https://www.latex-project.org/help/documentation/amsldoc.pdf) of the amsmath package.
 
-## What does it offer?
+### Who is it for?
+
+Anyone. Well, anyone who likes mathematics. Mathematicians, physicists, programmers, scientists, etc, can all benefit from MaTheX2Java capabilities.
+The possibility of converting mathematic formulas into real, executable code given simple to write LaTeX equations is of a great advantage, allowing users to easily test and execute such equations with different values.
+
+The fact that to be able to generate complex Java code is only necessary to have little LaTeX knowledge, makes it widely <i>usable</i> from anyone who 
+can correctly apply the supported LaTeX rules.
+
+### What does it offer?
 
 - **Quality**: the generated code is well-structured and correctly formatted.
 - **Easy-to-use**: intuitive interaction within the application.
-- **Flexibility**: allows a high degree of specification targeted on how the user wants the Java code to be generated, due to the _annotations features_ .
-- **No Java Knowledge**: it is not required that an user has prior knowledge on how Java works in order to generate mathematic formulas code. The application uses default values in these situations.
-- **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, and more support.
+- **Flexibility**: allows a high degree of specification targeted on how the user wants the Java code to be generated, due to the _annotations features_.
+- **No Prior Java Knowledge**: it is not required that an user has knowledge on how Java works in order to generate the formulas' code.
+- **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, as well as continuous support for the development of the application.
 
-## Who is it for?
+### What does it not offer?
 
-Anyone. Well, anyone who likes mathematics. Mathematicians, physicists, programmers, scientists, etc, can all benefit from MaTheX2Java capabilities.
-The possibility of converting mathematic formulas into real, executable code is of a great advantage, allowing to test and execute them with real values.
 
-The fact that to be able to generate complex Java code is only necessary to have little LaTeX knowledge, makes it widely <i>usable</i> from anyone who 
-can correctly apply the LaTeX rules.
+----------
 
-## Convertion Examples
+## Translation Examples
 
-Below you can find two examples (one simple and one complex) just to show you some of the vast features this application offers and how the final result looks like.
+Below you can find two examples (both a simple and a complex one) to showcase some of the vast features this application offers and how the final translation looks like. Please address to the [examples](http://mathex2java.com/rules) page of the application for more of these.
 
-### The simple one
+### A simple one
 
-Here is shown the basic functionality of **MaTheX2Java**. A simple equation which uses a factorial operation plus few other operations, including a cubic root function.
-
-It is also observed that due to the *annotation features* you can specify the type of the variables of the equation as you wish as well as the method's name and its return type.
-
-###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
+This example presents basic functionalities of **MaTheX2Java**. In this case, it is requested the translation of a simple LaTeX equation which uses a factorial plus few other operations, including a cubic root function.
 
 - ##### LaTeX code:
 
@@ -92,14 +112,15 @@ public class GeneratedAmsmath_30_9_2019_13_33_30 {
 }
 ```
 
+It can be observed that due to the *annotation features* of this application the user is free to specify the type of the equation's variables as well as the method's name or its return type.
+
+###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
+
 ### The complex one
 
-In this example, perhaps it is shown the most complex feature of **MaTheX2Java**: the use of summations.
-Here you can see that it accepts nested summations, and it automatically casts variables when it needs to (for instance,
+In this example, more complex features of **MaTheX2Java** are presented: the use of summations.
+It is shown that summations as well as nested summations are supported, and it automatically casts variables when it needs to (for instance,
 in the summation index variables).
-
-Note that, due to the method name changing feature of the *annotations*, the method which represents the equation is now names as `myExampleEquation`
-.
 
 - ##### LaTeX code 
 
@@ -171,7 +192,11 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 }
 ```
 
-## Technologies Used
+Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
+
+## Development Guidelines
+
+### Technologies Used
 
 The following technologies were used in this project:
 
@@ -181,11 +206,10 @@ The following technologies were used in this project:
 
 * [ESLint](https://eslint.org)
 
-## Development
 
-#### Local Setup
+### Local Setup
 
-##### Pre-Requisites
+##### Prerequisites
 
 1. Antlr4
 
@@ -211,6 +235,9 @@ These shall follow a naming format:
 - `dev/<succint-name>`: used for refactors and development-related issues (e.g. testing).
 - `feature/<succint-name>`: used for the implementation of features.
 
+### Contribution
+
+Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) for simple guidelines on how to contribute to this project.
 
 ## License
 
