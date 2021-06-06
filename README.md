@@ -199,22 +199,20 @@ Note the use of the *annotation* feature to rename the default method to be gene
 
 ### Technologies Used
 
-<p align="center">
-  <table>
-		<tr>
-		  <td align="center"><a href="https://developer.mozilla.org/en-EN/docs/Web/JavaScript">JavaScript</a></td>
-			<td align="center"><a href="https://github.com/antlr/antlr4">Antlr4</a></td>
-		  <td align="center"><a href="https://jestjs.io">Jest</a></td>
-		  <td align="center"><a href="https://eslint.org">ESLint</a></td>
-		</tr>
-		<tr>
-			<td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" width="80" height="80" /></td>
-			<td align="center"><img src="https://raw.githubusercontent.com/mike-lischke/vscode-antlr4/master/misc/antlr-logo.png" width="90" height="90" /></td>
-			<td align="center"><img src="https://d33wubrfki0l68.cloudfront.net/204482ca413433c80cd14fe369e2181dd97a2a40/092e2/assets/img/logo.svg" width="100" height="100" /></td>
-			<td align="center"><img src="https://jestjs.io/pt-BR/img/opengraph.png" width="100" /></td>
-		</tr>
-	</table>
-</p>
+<table align="center">
+	<tr>
+		<td align="center"><a href="https://developer.mozilla.org/en-EN/docs/Web/JavaScript">JavaScript</a></td>
+		<td align="center"><a href="https://github.com/antlr/antlr4">Antlr4</a></td>
+		<td align="center"><a href="https://jestjs.io">Jest</a></td>
+		<td align="center"><a href="https://eslint.org">ESLint</a></td>
+	</tr>
+	<tr>
+		<td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" width="80" height="80" /></td>
+		<td align="center"><img src="https://raw.githubusercontent.com/mike-lischke/vscode-antlr4/master/misc/antlr-logo.png" width="90" height="90" /></td>
+		<td align="center"><img src="https://d33wubrfki0l68.cloudfront.net/204482ca413433c80cd14fe369e2181dd97a2a40/092e2/assets/img/logo.svg" width="100" height="100" /></td>
+		<td align="center"><img src="https://jestjs.io/pt-BR/img/opengraph.png" width="100" /></td>
+	</tr>
+</table>
 
 ### Local Setup
 
