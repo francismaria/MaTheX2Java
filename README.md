@@ -11,17 +11,17 @@
 ## Table of Contents
 
 - [Introduction](#Introduction)
-  - What is it?
-  - Who is it for?
-  - What does it offer?
-  - What does it not offer?
+  - [What is it?](#What-is-it)
+  - [Who is it for?](#Who-is-it-for)
+  - [What does it offer?](#What-does-it-offer)
+  - [What does it not offer?](#What-does-it-not-offer)
 - [Translation Examples](#Translation-Examples)
-  - A simple one
-  - A complex one
+  - [A simple one](#a-simple-one)
+  - [A complex one](#a-complex-one)
 - [Development Guidelines](#Development-Guidelines)
-  - Technologies Used
-	- Local Setup
-	- Contribution
+  - [Technologies Used](#Technologies-used)
+  - [Local Setup](#Local-setup)
+  - [Contribution](#Contribution)
 - [License](#License)
 
 -------------
@@ -54,14 +54,15 @@ can correctly apply the supported LaTeX rules.
 
 ### What does it not offer?
 
-
-----------
+- **case**: default
+- **case**: default
+- **case**: default
 
 ## Translation Examples
 
 Below you can find two examples (both a simple and a complex one) to showcase some of the vast features this application offers and how the final translation looks like. Please address to the [examples](http://mathex2java.com/rules) page of the application for more of these.
 
-#### A simple one
+### A simple one
 
 This example presents basic functionalities of **MaTheX2Java**. In this case, it is requested the translation of a simple LaTeX equation which uses a factorial plus few other operations, including a cubic root function.
 
@@ -116,7 +117,7 @@ It can be observed that due to the *annotation features* of this application the
 
 ###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
 
-#### A complex one
+### A complex one
 
 In this example, more complex features of **MaTheX2Java** are presented: the use of summations.
 It is shown that summations as well as nested summations are supported, and it automatically casts variables when it needs to (for instance,
