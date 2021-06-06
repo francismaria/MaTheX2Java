@@ -17,7 +17,14 @@
     "moduleDirectories": [
       "node_modules",
       "src"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 90,
+        "lines": 90
+      }
+    }
   },
   "repository": {
     "type": "git",
