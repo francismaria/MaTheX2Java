@@ -7,7 +7,7 @@
 /* eslint-disable no-plusplus */
 
 // exceptions (errors)
-const InputTypeError = require('Errors/InputTypeError').InputTypeError;
+const InputTypeError = require('errors/InputTypeError').InputTypeError;
 // symbols
 const Symbol = require('../symbols/Symbol').Symbol;
 const SummationSymbol = require('../symbols/SummationSymbol').SummationSymbol;

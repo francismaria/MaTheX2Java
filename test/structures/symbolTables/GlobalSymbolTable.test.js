@@ -6,8 +6,8 @@
 
 /* eslint-disable */
 
-const GlobalSymbolTable = require('Structures/symbolTables/GlobalSymbolTable').GlobalSymbolTable;
-const InputTypeError = require('Errors/InputTypeError').InputTypeError;
+const GlobalSymbolTable = require('structures/symbolTables/GlobalSymbolTable').GlobalSymbolTable;
+const InputTypeError = require('errors/InputTypeError').InputTypeError;
 
 /** -----------------------------
  *   TEST METHOD NAME VALIDATION
