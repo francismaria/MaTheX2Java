@@ -28,39 +28,34 @@
 
 -------------
 
-## Introduction
+# Introduction
 
 ### What is it?
 
-MaTheX2Java is a web application which converts mathematic LaTeX code to Java code in real-time. Is is capable of translating
-many of the well-known mathematic LaTeX formulas and covert them to fully operational, well-structured Java code. It provides
-great flexibility due to its _annotation_ capacity which leverages even more the power of translation by permitting its users to customize translation details on how the code should be generated.
+MaTheX2Java is a web application which translates in real-time LaTeX mathematic expressions to fully operational and well-structured Java code. This tool offers great functionalities by providing code flexibility due to its _annotation_ feature which leverages even more the power of translation by permitting its users to customize translation details on how the Java code should be generated.
 
 ###### Note: MatheX2Java currently compiles and generates code according to [version 2.1](https://www.latex-project.org/help/documentation/amsldoc.pdf) of the amsmath package.
 
 ### Who is it for?
 
 Anyone. Well, anyone who likes mathematics. Mathematicians, physicists, programmers, scientists, etc, can all benefit from MaTheX2Java capabilities.
-The possibility of converting mathematic formulas into real, executable code given simple to write LaTeX equations is of a great advantage, allowing users to easily test and execute such equations with different values.
-
-The fact that to be able to generate complex Java code is only necessary to have little LaTeX knowledge, makes it widely <i>usable</i> from anyone who 
-can correctly apply the supported LaTeX rules.
+The possibility of converting mathematic formulas written in LaTeX into real, executable code is of a great advantage, allowing non-experienced programming users to easily test and execute different formulas in real-time and without the effort of requiring any prior Java knowledge making it a widely usable tool for anyone interested in running commputations of LaTeX-defined math formmulas.
 
 ### What does it offer?
 
-- **Quality**: the generated code is well-structured and correctly formatted.
+- **Quality**: the generated code is well-structured and correctly formatted due to the detailed translation process.
 - **Easy-to-use**: intuitive interaction within the application.
+- **No Prior Java Knowledge**: it is not required that an user has knowledge on how Java works in order to generate the executable code.
+- **Dedicated Grammars**: the tool is built on two dedicated grammars targeting the different use-cases an user may follow. This provides flexibility and scalability on maintaining and adding features to it. 
 - **Flexibility**: allows a high degree of specification targeted on how the user wants the Java code to be generated, due to the _annotations features_.
-- **No Prior Java Knowledge**: it is not required that an user has knowledge on how Java works in order to generate the formulas' code.
 - **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, as well as continuous support for the development of the application.
 
 ### What does it not offer?
 
-- **case**: default
-- **case**: default
-- **case**: default
+- **Complete Support for LaTeX Symbols**: only a subset of the supported LaTeX symbols are currently supported ([list of supported symbols](http://mathex2java.com/rules)).
+- **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
-## Translation Examples
+# Translation Examples
 
 Below you can find two examples (both a simple and a complex one) to showcase some of the vast features this application offers and how the final translation looks like. Please address to the [examples](http://mathex2java.com/rules) page of the application for more of these.
 
@@ -197,7 +192,7 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 
 Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
 
-## Technologies Used
+# Technologies Used
 
 <table align="center">
 	<tr>
@@ -214,10 +209,10 @@ Note the use of the *annotation* feature to rename the default method to be gene
 	</tr>
 </table>
 
-## Contribution
+# Contribution
 
 Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) guide to start contributing to this project.
 
-## License
+# License
 
 This project is licensed under the GPLv2 license. Check [LICENSE](./LICENSE) for details.
