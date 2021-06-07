@@ -197,9 +197,7 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 
 Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
 
-## Development Guidelines
-
-### Technologies Used
+## Technologies Used
 
 <table align="center">
 	<tr>
@@ -216,7 +214,7 @@ Note the use of the *annotation* feature to rename the default method to be gene
 	</tr>
 </table>
 
-### Contribution
+## Contribution
 
 Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) guide to start contributing to this project.
 
