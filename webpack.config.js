@@ -6,11 +6,11 @@ module.exports = {
     extensions: ['.js'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
-      Grammars: path.resolve(__dirname, 'src/grammars/'),
-      Visitors: path.resolve(__dirname, 'src/visitors/'),
-      Structures: path.resolve(__dirname, 'src/structures/'),
-      Errors: path.resolve(__dirname, 'src/errors/'),
-      Java: path.resolve(__dirname, 'src/java/'),
+      grammars: path.resolve(__dirname, 'src/grammars/'),
+      visitors: path.resolve(__dirname, 'src/visitors/'),
+      structures: path.resolve(__dirname, 'src/structures/'),
+      errors: path.resolve(__dirname, 'src/errors/'),
+      java: path.resolve(__dirname, 'src/java/'),
     },
     fallback: 
     { fs: false }

@@ -15,18 +15,18 @@
 /* eslint-disable radix */
 
 // grammars visitors
-const AmsmathVisitor = require('Grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
-const AmsmathParser = require('Grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
+const AmsmathVisitor = require('grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
+const AmsmathParser = require('grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
 // symbols
-const Symbol = require('Structures/symbols/Symbol').Symbol;
-const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationSymbol;
+const Symbol = require('structures/symbols/Symbol').Symbol;
+const SummationSymbol = require('structures/symbols/SummationSymbol').SummationSymbol;
 // name templates
 const FACTORIAL_METHOD_TEMPLATE = 'factorial_MX2J';
 const summationMethodTemplate = 'summation_MX2J_';
 // exceptions (errors)
-const CustomError = require('Errors/CustomError').CustomError;
-const ArrayDimensionsError = require('Errors/ArrayDimensionsError').ArrayDimensionsError;
-const ArrayIndexOutOfBoundsError = require('Errors/ArrayIndexOutOfBoundsError').ArrayIndexOutOfBoundsError;
+const CustomError = require('errors/CustomError').CustomError;
+const ArrayDimensionsError = require('errors/ArrayDimensionsError').ArrayDimensionsError;
+const ArrayIndexOutOfBoundsError = require('errors/ArrayIndexOutOfBoundsError').ArrayIndexOutOfBoundsError;
 
 /**
  * Constants to access child nodes.

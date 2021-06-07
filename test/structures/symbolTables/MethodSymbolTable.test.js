@@ -6,9 +6,9 @@
 
 /* eslint-disable */
 
-const MethodSymbolTable = require('Structures/symbolTables/MethodSymbolTable').MethodSymbolTable;
-const Symbol = require('Structures/symbols/Symbol').Symbol;
-const InputTypeError = require('Errors/InputTypeError').InputTypeError;
+const MethodSymbolTable = require('structures/symbolTables/MethodSymbolTable').MethodSymbolTable;
+const Symbol = require('structures/symbols/Symbol').Symbol;
+const InputTypeError = require('errors/InputTypeError').InputTypeError;
 
 // test symbol table
 const symbolTableTest = new MethodSymbolTable('equation_tests');

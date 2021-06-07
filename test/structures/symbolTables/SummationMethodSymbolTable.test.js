@@ -5,10 +5,10 @@
  */
 
 /* eslint-disable */
-const SummationMethodSymbolTable = require('Structures/symbolTables/SummationMethodSymbolTable').SummationMethodSymbolTable;
-const Symbol = require('Structures/symbols/Symbol').Symbol;
-const SummationSymbol = require('Structures/symbols/SummationSymbol').SummationSymbol;
-const InputTypeError = require('Errors/InputTypeError').InputTypeError;
+const SummationMethodSymbolTable = require('structures/symbolTables/SummationMethodSymbolTable').SummationMethodSymbolTable;
+const Symbol = require('structures/symbols/Symbol').Symbol;
+const SummationSymbol = require('structures/symbols/SummationSymbol').SummationSymbol;
+const InputTypeError = require('errors/InputTypeError').InputTypeError;
 
 /** --------------------------
  *   TEST ADD/GET PARENT NAME
