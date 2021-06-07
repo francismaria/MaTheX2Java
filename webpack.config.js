@@ -17,7 +17,7 @@ module.exports = {
   },
   entry: './src/CompilerExecutor.js',
   output: {
-    filename: 'mathex2java.js',
+    filename: './dist/mathex2java.js',
     path: __dirname,
     library: {
       name: 'MaThex2Java',
