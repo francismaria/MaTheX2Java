@@ -1,5 +1,5 @@
 const CompilerExecution = require('CompilerExecution').CompilerExecution;
-const EmptyInputCodeError = require('Errors/EmptyInputCodeError').EmptyInputCodeError;
+const EmptyInputCodeError = require('errors/EmptyInputCodeError').EmptyInputCodeError;
 
 class CompilerExecutor {
   static getCurrentDate() {

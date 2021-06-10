@@ -1,40 +1,47 @@
 <h1 align="center">
-    <a href="#">MaTheX2Java</a>
+    <a href="http://mathex2java.com">MaTheX2Java</a>
 </h1> 
 
 <p align="center">
-    <a href="#"><u>Web Application</u></a>
-    <span> | </span>
     <a href="#"><u>User's Guide</u></a>
-
 </p>
 
+[![Node.js CI](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml/badge.svg?branch=main)](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/francismaria/mathex2java-translator/graphs/commit-activity)
 [![License: MIT](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-[![Build Status](https://travis-ci.org/francismaria/MaTheX2Java.svg?branch=master)](https://travis-ci.org/francismaria/MaTheX2Java)
 
-## What is it?
+## Table of Contents
 
-MaTheX2Java is a web application which converts mathematic LaTeX code to Java code, in real-time, capable of accepting
-many of the well-known mathematic LaTeX formulas and covert them to fully operational, well-structured Java code. It provides
-a great flexibility due to its _annotation_ capacity, that allows to specify customizable details about how the code is generated.
+- [Introduction](#Introduction)
+  - [What is it?](#What-is-it)
+  - [Who is it for?](#Who-is-it-for)
+  - [What does it offer?](#What-does-it-offer)
+  - [What does it not offer?](#What-does-it-not-offer)
+- [Translation Examples](#Translation-Examples)
+  - [A simple one](#a-simple-one)
+  - [A complex one](#a-complex-one)
+- [Development Guidelines](#Development-Guidelines)
+  - [Technologies Used](#Technologies-used)
+  - [Local Setup](#Local-setup)
+  - [Contribution](#Contribution)
+- [License](#License)
 
-###### Note: MatheX2Java currently compiles and generates code according to version 2.1 of the amsmath package.
+-------------
 
-## What does it offer?
+# Introduction
 
-MaTheX2Java is a web application which translates in real-time LaTeX mathematic expressions to fully operational and well-structured Java code. This tool offers great functionalities by providing code flexibility due to its _annotation_ feature which leverages even more the power of translation by permitting its users to customize translation details on how the Java code should be generated. 
+### What is it?
 
-Currently, this application is available at http://mathex2java.com where users can easily interact and experiment with it.
+MaTheX2Java is a web application which translates in real-time LaTeX mathematic expressions to fully operational and well-structured Java code. This tool offers great functionalities by providing code flexibility due to its _annotation_ feature which leverages even more the power of translation by permitting its users to customize translation details on how the Java code should be generated.
 
 ###### Note: MatheX2Java currently compiles and generates code according to [version 2.1](https://www.latex-project.org/help/documentation/amsldoc.pdf) of the amsmath package.
 
-## Who is it for?
+### Who is it for?
 
 Anyone. Well, anyone who likes mathematics. Mathematicians, physicists, programmers, scientists, etc, can all benefit from MaTheX2Java capabilities.
-The possibility of converting mathematic formulas into real, executable code is of a great advantage, allowing to test and execute them with real values.
+The possibility of converting mathematic formulas written in LaTeX into real, executable code is of a great advantage, allowing non-experienced programming users to easily test and execute different formulas in real-time and without the effort of requiring any prior Java knowledge making it a widely usable tool for anyone interested in running commputations of LaTeX-defined math formmulas.
 
-The fact that to be able to generate complex Java code is only necessary to have little LaTeX knowledge, makes it widely <i>usable</i> from anyone who 
-can correctly apply the LaTeX rules.
+### What does it offer?
 
 - **Quality**: the generated code is well-structured and correctly formatted due to the detailed translation process.
 - **Easy-to-use**: intuitive interaction within the application.
@@ -49,15 +56,18 @@ can correctly apply the LaTeX rules.
 - **Real-Time Code Execution**: this application focuses on code translation only. There is no support for running automatically the generated Java code.
 - **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
-### The simple one
+- **Complete Support for LaTeX Symbols**: only a subset of the supported LaTeX symbols are currently supported ([list of supported symbols](http://mathex2java.com/rules)).
+- **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
-Here is shown the basic functionality of **MaTheX2Java**. A simple equation which uses a factorial operation plus few other operations, including a cubic root function.
+# Translation Examples
 
-It is also observed that due to the *annotation features* you can specify the type of the variables of the equation as you wish as well as the method's name and its return type.
+Below you can find two examples (both a simple and a complex one) to showcase some of the vast features this application offers and how the final translation looks like. Please address to the [examples](http://mathex2java.com/rules) page of the application for more of these.
 
-###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
+### A simple one
 
-- ##### LaTeX code:
+This example presents basic functionalities of **MaTheX2Java**. In this case, it is requested the translation of a simple LaTeX equation which uses a factorial plus few other operations, including a cubic root function.
+
+##### LaTeX code
 
 ```
 % name : example
@@ -67,7 +77,7 @@ result = (3+y)! + 7 \times 3 + z - \sqrt[3]{27}
 \end{equation}
 ```
 
-- ##### Java code:
+##### Java code
 
 ```java
 import java.lang.Math;
@@ -104,16 +114,17 @@ public class GeneratedAmsmath_30_9_2019_13_33_30 {
 }
 ```
 
-### The complex one
+It can be observed that due to the *annotation features* of this application the user is free to specify the type of the equation's variables as well as the method's name or its return type.
 
-In this example, perhaps it is shown the most complex feature of **MaTheX2Java**: the use of summations.
-Here you can see that it accepts nested summations, and it automatically casts variables when it needs to (for instance,
+###### Note: *annotation features* are **optional**. If none is specified, then default values will be assumed during the code generation.
+
+### A complex one
+
+In this example, more complex features of **MaTheX2Java** are presented: the use of summations.
+It is shown that summations as well as nested summations are supported, and it automatically casts variables when it needs to (for instance,
 in the summation index variables).
 
-Note that, due to the method name changing feature of the *annotations*, the method which represents the equation is now names as `myExampleEquation`
-.
-
-- ##### LaTeX code 
+##### LaTeX code 
 
 ```
 % name : myExampleEquation
@@ -122,7 +133,7 @@ a = \sum_{i = 0}^{1000}{ \sum_{j = 0}^{N}{  \sum_{k = 2}^{1000}{ j + i + k + c }
 \end{equation}
 ```
 
-- ##### Java code
+##### Java code
 
 ```java
 import java.lang.Math;
@@ -183,15 +194,7 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 }
 ```
 
-## Technologies Used
-
-The following technologies were used in this project:
-
-* [antlr4](https://github.com/antlr/antlr4)
-
-* [JEST](https://jestjs.io)
-
-* [ESLint](https://eslint.org)
+Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
 
 ## Usage
 
@@ -218,12 +221,25 @@ function runTranslation(inputCode) {
 
 ## Development
 
-If you'd like to contribute to the project or just want to test MaTheX2Java locally, you should follow these steps:
+<table align="center">
+	<tr>
+		<td align="center"><a href="https://developer.mozilla.org/en-EN/docs/Web/JavaScript">JavaScript</a></td>
+		<td align="center"><a href="https://github.com/antlr/antlr4">Antlr4</a></td>
+		<td align="center"><a href="https://eslint.org">ESLint</a></td>
+		<td align="center"><a href="https://jestjs.io">Jest</a></td>
+	</tr>
+	<tr>
+		<td align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" width="80" height="80" /></td>
+		<td align="center"><img src="https://raw.githubusercontent.com/mike-lischke/vscode-antlr4/master/misc/antlr-logo.png" width="90" height="90" /></td>
+		<td align="center"><img src="https://d33wubrfki0l68.cloudfront.net/204482ca413433c80cd14fe369e2181dd97a2a40/092e2/assets/img/logo.svg" width="100" height="100" /></td>
+		<td align="center"><img src="https://jestjs.io/pt-BR/img/opengraph.png" width="100" /></td>
+	</tr>
+</table>
 
-1. Pull necessary dependencies:
+# Contribution
 
-`$ npm install`
+Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) guide to start contributing to this project.
 
-## License
+# License
 
-This project is licensed under the GPLv2 license. Check [LICENSE](./LICENSE.md) for details.
+This project is licensed under the GPLv2 license. Check [LICENSE](./LICENSE) for details.

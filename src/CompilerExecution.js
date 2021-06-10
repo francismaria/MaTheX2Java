@@ -9,18 +9,18 @@
 
 const antlr4 = require('antlr4/index');
 // -- Generator for Java code
-const JavaGenerator = require('Java/JavaGenerator').JavaGenerator;
+const JavaGenerator = require('java/JavaGenerator').JavaGenerator;
 // -- Annotation Grammar
-const AnnotationLexer = require('Grammars/static/AnnotationGrammar/AnnotationLexer').AnnotationLexer;
-const AnnotationParser = require('Grammars/static/AnnotationGrammar/AnnotationParser').AnnotationParser;
-const AnnotationCodeVisitor = require('Visitors/annotation/AnnotationCodeVisitor').AnnotationCodeVisitor;
+const AnnotationLexer = require('grammars/static/AnnotationGrammar/AnnotationLexer').AnnotationLexer;
+const AnnotationParser = require('grammars/static/AnnotationGrammar/AnnotationParser').AnnotationParser;
+const AnnotationCodeVisitor = require('visitors/annotation/AnnotationCodeVisitor').AnnotationCodeVisitor;
 // -- Amsmath Grammar
-const AmsmathLexer = require('Grammars/static/AmsmathGrammar/GrammarLexer').GrammarLexer;
-const AmsmathParser = require('Grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
-const AmsmathGenerateCodeVisitor = require('Visitors/amsmath/AmsmathGenerateCodeVisitor').AmsmathGenerateCodeVisitor;
-const AmsmathErrorHandler = require('Errors/AmsmathErrorHandler').AmsmathErrorListener;
+const AmsmathLexer = require('grammars/static/AmsmathGrammar/GrammarLexer').GrammarLexer;
+const AmsmathParser = require('grammars/static/AmsmathGrammar/GrammarParser').GrammarParser;
+const AmsmathGenerateCodeVisitor = require('visitors/amsmath/AmsmathGenerateCodeVisitor').AmsmathGenerateCodeVisitor;
+const AmsmathErrorHandler = require('errors/AmsmathErrorHandler').AmsmathErrorListener;
 // -- Symbols Table
-const GlobalSymbolTable = require('Structures/symbolTables/GlobalSymbolTable').GlobalSymbolTable;
+const GlobalSymbolTable = require('structures/symbolTables/GlobalSymbolTable').GlobalSymbolTable;
 
 /**
  * Class responsible for the building and the execution of the grammars parsers.

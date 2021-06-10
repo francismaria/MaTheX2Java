@@ -1,7 +1,7 @@
 /**
  * © Francisco Maria, 2019
  */
-const AmsmathVisitor = require('Grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
+const AmsmathVisitor = require('grammars/static/AmsmathGrammar/GrammarVisitor').GrammarVisitor;
 
 // ESLint disabled rules
 /* eslint-disable camelcase */
