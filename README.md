@@ -20,10 +20,8 @@
 - [Translation Examples](#Translation-Examples)
   - [A simple one](#a-simple-one)
   - [A complex one](#a-complex-one)
-- [Development Guidelines](#Development-Guidelines)
-  - [Technologies Used](#Technologies-used)
-  - [Local Setup](#Local-setup)
-  - [Contribution](#Contribution)
+- [Technologies Used](#Technologies-used)
+- [Contribution](#Contribution)
 - [License](#License)
 
 -------------
