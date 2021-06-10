@@ -3,7 +3,10 @@
 </h1> 
 
 <p align="center">
-    <a href="#"><u>User's Guide</u></a>
+    <a href="http://mathex2java.com"><u>Web Application</u></a>
+    <span> | </span>
+    <a href="http://mathex2java.com/rules"><u>User's Guide</u></a>
+
 </p>
 
 [![Node.js CI](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml/badge.svg?branch=main)](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml)
