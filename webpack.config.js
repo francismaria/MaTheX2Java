@@ -10,7 +10,7 @@ module.exports = {
       visitors: path.resolve(__dirname, 'src/visitors/'),
       structures: path.resolve(__dirname, 'src/structures/'),
       errors: path.resolve(__dirname, 'src/errors/'),
-      java: path.resolve(__dirname, 'src/java/'),
+      java: path.resolve(__dirname, 'src/generator/'),
     },
     fallback: 
     { fs: false }

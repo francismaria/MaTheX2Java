@@ -9,7 +9,7 @@
 
 const antlr4 = require('antlr4/index');
 // -- Generator for Java code
-const JavaGenerator = require('java/JavaGenerator').JavaGenerator;
+const JavaGenerator = require('generator/JavaGenerator').JavaGenerator;
 // -- Annotation Grammar
 const AnnotationLexer = require('grammars/static/AnnotationGrammar/AnnotationLexer').AnnotationLexer;
 const AnnotationParser = require('grammars/static/AnnotationGrammar/AnnotationParser').AnnotationParser;
