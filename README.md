@@ -217,7 +217,7 @@ function runTranslation(inputCode) {
 }
 ```
 
-## Development
+# Technologies Used
 
 <table align="center">
 	<tr>
