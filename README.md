@@ -194,7 +194,7 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 
 Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
 
-## Usage
+# Usage
 
 MaTheX2Java allows clients to use it in differents ways.
 
