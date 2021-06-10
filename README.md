@@ -45,19 +45,23 @@ The possibility of converting mathematic formulas written in LaTeX into real, ex
 ### What does it offer?
 
 - **Quality**: the generated code is well-structured and correctly formatted due to the detailed translation process.
+
 - **Easy-to-use**: intuitive interaction within the application.
+
 - **No Prior Java Knowledge**: it is not required that an user has knowledge on how Java works in order to generate the executable code.
+
 - **Dedicated Grammars**: the tool is built on two dedicated grammars targeting the different use-cases an user may follow. This provides flexibility and scalability on maintaining and adding features to it. 
+
 - **Flexibility**: allows a high degree of customization targeted on how the user wants the Java code to be generated, due to the _annotations features_.
+
 - **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, as well as continuous support for the development of the application.
 
 ### What does it not offer?
 
 - **Complete Support for LaTeX Symbols**: only a subset of the supported LaTeX symbols are currently supported ([list of supported symbols](http://mathex2java.com/rules)).
-- **Real-Time Code Execution**: this application focuses on code translation only. There is no support for running automatically the generated Java code.
-- **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
-- **Complete Support for LaTeX Symbols**: only a subset of the supported LaTeX symbols are currently supported ([list of supported symbols](http://mathex2java.com/rules)).
+- **Real-Time Code Execution**: this application focuses on code translation only. There is no support for running automatically the generated Java code.
+
 - **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
 # Translation Examples
