@@ -28,7 +28,7 @@ If you'd like to contribute to the project or just want to test MaTheX2Java loca
 
 This repository has a specific structure which every contributor should respect. 
 
-![]()
+![](./docs/images/branchStructure.png)
 
 There are two main branches in this repository
 
