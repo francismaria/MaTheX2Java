@@ -22,11 +22,11 @@ a great flexibility due to its _annotation_ capacity, that allows to specify cus
 
 ## What does it offer?
 
-- **Quality**: the generated code is well-structured and correctly formatted.
-- **Easy-to-use**: intuitive interaction within the application.
-- **Flexibility**: allows a high degree of specification targeted on how the user wants the Java code to be generated, due to the _annotations features_ .
-- **No Java Knowledge**: it is not required that an user has prior knowledge on how Java works in order to generate mathematic formulas code. The application uses default values in these situations.
-- **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, and more support.
+MaTheX2Java is a web application which translates in real-time LaTeX mathematic expressions to fully operational and well-structured Java code. This tool offers great functionalities by providing code flexibility due to its _annotation_ feature which leverages even more the power of translation by permitting its users to customize translation details on how the Java code should be generated. 
+
+Currently, this application is available at http://mathex2java.com where users can easily interact and experiment with it.
+
+###### Note: MatheX2Java currently compiles and generates code according to [version 2.1](https://www.latex-project.org/help/documentation/amsldoc.pdf) of the amsmath package.
 
 ## Who is it for?
 
@@ -36,9 +36,18 @@ The possibility of converting mathematic formulas into real, executable code is 
 The fact that to be able to generate complex Java code is only necessary to have little LaTeX knowledge, makes it widely <i>usable</i> from anyone who 
 can correctly apply the LaTeX rules.
 
-## Convertion Examples
+- **Quality**: the generated code is well-structured and correctly formatted due to the detailed translation process.
+- **Easy-to-use**: intuitive interaction within the application.
+- **No Prior Java Knowledge**: it is not required that an user has knowledge on how Java works in order to generate the executable code.
+- **Dedicated Grammars**: the tool is built on two dedicated grammars targeting the different use-cases an user may follow. This provides flexibility and scalability on maintaining and adding features to it. 
+- **Flexibility**: allows a high degree of customization targeted on how the user wants the Java code to be generated, due to the _annotations features_.
+- **Continuous Development**: MaTheX2Java aims to be regularly updated with bug fixes, new and extended features, as well as continuous support for the development of the application.
 
-Below you can find two examples (one simple and one complex) just to show you some of the vast features this application offers and how the final result looks like.
+### What does it not offer?
+
+- **Complete Support for LaTeX Symbols**: only a subset of the supported LaTeX symbols are currently supported ([list of supported symbols](http://mathex2java.com/rules)).
+- **Real-Time Code Execution**: this application focuses on code translation only. There is no support for running automatically the generated Java code.
+- **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
 
 ### The simple one
 
@@ -183,6 +192,29 @@ The following technologies were used in this project:
 * [JEST](https://jestjs.io)
 
 * [ESLint](https://eslint.org)
+
+## Usage
+
+MaTheX2Java allows clients to use it in differents ways.
+
+### Web Application
+
+A publicly available website is available for use at: http://mathex2java.com.
+
+### JavaScript Target
+
+This application can also be integrated in a web application by importing the minified bundle from the script.
+
+```html
+<!-- Import Script -->
+<script src="/dist/mathex2java.js"></script>
+```
+```javascript
+// Run instance of mathex2java
+function runTranslation(inputCode) {
+    return MaThex2Java.CompilerExecutor.runner(inputCode);
+}
+```
 
 ## Development
 

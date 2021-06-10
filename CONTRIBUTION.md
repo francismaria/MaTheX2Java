@@ -1,4 +1,16 @@
-### Local Setup
+# Contribution Guidelines
+
+## Table Of Contents
+
+- [1. Local Setup]()
+- [1. Local Setup]()
+- [1. Local Setup]()
+
+## Introduction
+
+Thank you for your interest in helping to develop and leverage even more the power of MaTheX2Java. We are really eager to have you here! This project focuses on providing not only a functional but a maintainable and scalable application which provides its users and developers a great experience. In order to offer this a set of guidelines were defined so that these are followed and respected by each contributor of this project. Please carefully read through them and if in any doubts feel free to open an issue.
+
+## Local Setup
 
 ##### Prerequisites
 
