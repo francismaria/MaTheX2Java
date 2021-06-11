@@ -12,8 +12,6 @@
 		<a href="https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml"><img src="https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml/badge.svg?branch=main"/></a> <a href="https://GitHub.com/francismaria/mathex2java-translator/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a> <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html"><img src="https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue"/></a>
 </p>
 
-------------
-
 ## Table of Contents
 
 - [Introduction](#Introduction)
@@ -64,6 +62,8 @@ The possibility of converting mathematic formulas written in LaTeX into real, ex
 - **Real-Time Code Execution**: this application focuses on code translation only. There is no support for running automatically the generated Java code.
 
 - **Reverse Translation**: at the moment there are no plans to support the reverse translation workflow (Java code to LaTeX formulas).
+
+------------
 
 # Translation Examples
 
@@ -202,6 +202,8 @@ public class GeneratedAmsmath_29_9_2019_20_47_19 {
 
 Note the use of the *annotation* feature to rename the default method to be generated to `myExampleEquation`.
 
+------------
+
 # Usage
 
 MaTheX2Java allows clients to use it in differents ways.
@@ -225,6 +227,8 @@ function runTranslation(inputCode) {
 }
 ```
 
+------------
+
 # Technologies Used
 
 <table align="center">
@@ -242,9 +246,13 @@ function runTranslation(inputCode) {
 	</tr>
 </table>
 
+------------
+
 # Contribution
 
 Please refer to the [CONTRIBUTION](./CONTRIBUTION.md) guide to start contributing to this project.
+
+------------
 
 # License
 
