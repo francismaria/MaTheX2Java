@@ -6,12 +6,11 @@
     <a href="http://mathex2java.com"><u>Web Application</u></a>
     <span> | </span>
     <a href="http://mathex2java.com/rules"><u>User's Guide</u></a>
-
 </p>
 
-[![Node.js CI](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml/badge.svg?branch=main)](https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/francismaria/mathex2java-translator/graphs/commit-activity)
-[![License: MIT](https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+<p align="center">
+		<a href="https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml"><img src="https://github.com/francismaria/mathex2java-translator/actions/workflows/nodejs.ci.yml/badge.svg?branch=main"/></a> <a href="https://GitHub.com/francismaria/mathex2java-translator/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" /></a> <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html"><img src="https://img.shields.io/badge/license-GPL%20(%3E%3D%202)-blue"/></a>
+</p>
 
 ## Table of Contents
 
