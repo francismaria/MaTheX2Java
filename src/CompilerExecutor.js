@@ -1,19 +1,26 @@
 const CompilerExecution = require('CompilerExecution').CompilerExecution;
 const EmptyInputCodeError = require('errors/EmptyInputCodeError').EmptyInputCodeError;
 
+const EMPTY = '';
+const FILENAME_PREFIX = 'GeneratedAmsmath';
+
 class CompilerExecutor {
   static getCurrentDate() {
     const date = new Date();
     return (`${String(date.getDate())}_${String(date.getMonth() + 1)}_${String(date.getFullYear())}_${String(date.getHours())}_${String(date.getMinutes())}_${String(date.getSeconds())}`);
   }
 
+  static generateFileName() {
+    return `${FILENAME_PREFIX}_${this.getCurrentDate()}`;
+  }
+
   static validateCode(code) {
-    if(code === '')
+    if(code === EMPTY)
       throw new EmptyInputCodeError('Code input is empty.');
   }
 
   static startCompilerExecution(code) {
-    const fileName = getCurrentDate();
+    const fileName = `${getCurrentDate()}`;
     const execution = new CompilerExecution(code, fileName);
 
     execution.buildAnnotationParseTrees();
