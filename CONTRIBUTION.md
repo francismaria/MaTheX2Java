@@ -2,27 +2,47 @@
 
 ## Table Of Contents
 
-- [1. Local Setup]()
-- [1. Local Setup]()
-- [1. Local Setup]()
+- [Introduction](#Introduction)
+- [Getting Started](#Getting-Started)
+  - [Prerequisites](#Prerequisites)
+  - [Installation](#Installation)
+- [Repository Structure](#Repository-Structure)
+  - [Pull Requests](#Pull-Requests)
+- [Releases](#Releases)
+  - [Versioning System](#Versioning-System)
 
 ## Introduction
 
 Thank you for your interest in helping to develop and leverage even more the power of MaTheX2Java. We are really eager to have you here! This project focuses on providing not only a functional but a maintainable and scalable application which provides its users and developers a great experience. In order to offer this a set of guidelines were defined so that these are followed and respected by each contributor of this project. Please carefully read through them and if in any doubts feel free to open an issue.
 
-## Local Setup
+## Getting Started
 
-##### Prerequisites
+### Prerequisites
 
-1. Antlr4
+Before the installation of the application it is recommended to have the Jar of Antlr4 in order to generate the grammars targets used by the application to successfully complete the translation.
 
-``
+1. Install Antlr4 v4.7.2 (Jar).
 
-If you'd like to contribute to the project or just want to test MaTheX2Java locally, please follow the below steps:
+This version of antlr4 can be found here: https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/. After succesful installation of the Jar update your classpath to easily run it:
 
-1. Pull necessary dependencies:
+```bash
+# Export the Classpath + Setup aliases (This should be in .zshrc/.bash_profile)
+# The jar can be downloaded here: https://repo1.maven.org/maven2/org/antlr/antlr4/4.7.2/
+
+export CLASSPATH=".:/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
+```
+
+### Installation
+
+
+
+1. Pull necessary dependencies.
 
 `$ npm install`
+
+### 
 
 ## Repository Structure
 
