@@ -7,9 +7,13 @@
   - [Prerequisites](#Prerequisites)
   - [Installation](#Installation)
 - [Repository Structure](#Repository-Structure)
+  - [Packages](#Packages)
+  - [Branches](#Branches)
+- [Workflow](#Workflow)
+  - [Commits](#Commits)
   - [Pull Requests](#Pull-Requests)
-- [Releases](#Releases)
   - [Versioning System](#Versioning-System)
+  - [Releases](#Releases)
 
 ## Introduction
 
@@ -47,6 +51,8 @@ alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPAT
 ## Repository Structure
 
 This repository has a specific structure which every contributor should respect. 
+
+### Branch Structure
 
 ![](./docs/images/branchStructure.png)
 
