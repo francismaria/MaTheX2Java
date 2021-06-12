@@ -25,7 +25,7 @@ const GlobalSymbolTable = require('structures/symbolTables/GlobalSymbolTable').G
 /**
  * Class responsible for the building and the execution of the grammars parsers.
  */
-class CompilerExecution {
+class TranslationExecution {
   constructor(input, fileName) {
     this.fileName = fileName;
     this.globalSymbolTable = new GlobalSymbolTable();
@@ -54,6 +54,8 @@ class CompilerExecution {
 
     this.annotationParser.removeErrorListeners();
     this.annotationParser.addErrorListener(errorHandler);
+
+    this.buildAnnotationParseTrees();
   }
 
   /**
@@ -104,6 +106,8 @@ class CompilerExecution {
 
     this.codeParser.removeErrorListeners();
     this.codeParser.addErrorListener(errorHandler);
+
+    this.buildCodeParseTrees();
   }
 
   /**
@@ -143,4 +147,4 @@ class CompilerExecution {
   }
 }
 
-exports.CompilerExecution = CompilerExecution;
+exports.TranslationExecution = TranslationExecution;

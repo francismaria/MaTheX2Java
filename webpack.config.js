@@ -15,14 +15,18 @@ module.exports = {
     fallback: 
     { fs: false }
   },
-  entry: './src/CompilerExecutor.js',
+  entry: './src/TranslationExecutor.js',
   output: {
-    filename: './dist/mathex2java.js',
+    filename: './dist/mathex2java.bundle.js',
     path: __dirname,
     library: {
-      name: 'MaThex2Java',
+      name: 'mathex2java',
       type: 'var'
     },
     libraryTarget: 'var'
+  },
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
 };
