@@ -12,25 +12,24 @@ const testArgumentSymbol = new SummationSymbol('argVar', 'INT', true, false);
 // Summation Symbol that is not an argument and is an index variable
 const testIndexVariableSymbol = new SummationSymbol('indexVar', 'INT', false, true);
 
-/** ----------------------------------------
- *   TEST SUMMATION SYMBOL IS INFINITY FLAG
- *  ---------------------------------------- */
-
-test('Verify index variable flag', () => {
+test('Argument symbol is not set as an index variable', () => {
   expect(testArgumentSymbol.isIndexVariable()).toBe(false);
+});
+
+test('Index variable symbol is set as an index variable', () => {
   expect(testIndexVariableSymbol.isIndexVariable()).toBe(true);
 });
 
-/** ----------------------------------------
- *   TEST SUMMATION SYMBOL IS INFINITY FLAG
- *  ---------------------------------------- */
-
-test('Verify infinity flag', () => {
-  // Summation Symbol that is an argument and not an index variable
+test('Infinity flag is set to false by default', () => {
   const exampleSymbol = new SummationSymbol('argVar', 'INT', true, false);
 
   expect(exampleSymbol.isInfinity()).toBe(false);
-  exampleSymbol.setAsInfinity()
+});
+
+test('Infinity flag is set to true on demand', () => {
+  const exampleSymbol = new SummationSymbol('argVar', 'INT', true, false);
+  exampleSymbol.setAsInfinity();
+
   expect(exampleSymbol.isInfinity()).toBe(true);
 });
 

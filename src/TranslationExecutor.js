@@ -18,8 +18,8 @@ function validateCode(code) {
 }
 
 function startTranslationExecution(code) {
-  const fileName = generateFileName();
-  const execution = new TranslationExecution(code, fileName);
+  const className = generateFileName();
+  const execution = new TranslationExecution(code, className);
   
   execution.walkAnnotationTree();
   execution.walkAmsmathTree();
