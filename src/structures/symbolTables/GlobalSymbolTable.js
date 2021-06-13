@@ -9,7 +9,7 @@
 
 // templates
 const FACTORIAL_METHOD_TEMPLATE = 'factorial_MX2J';
-const summationMethodTemplate = 'summation_MX2J_';
+const SUMMATION_METHOD_PREFIX_TEMPLATE = 'summation_MX2J_';
 // exceptions (errors)
 const InputTypeError = require('errors/InputTypeError').InputTypeError;
 // symbol tables
@@ -50,7 +50,7 @@ class GlobalSymbolTable {
    * @param {string} parentName the name of the parent summation of the summation to be added
    */
   insertSummationMethod(parentName) {
-    const summationName = summationMethodTemplate + this.summationsCounter;
+    const summationName = SUMMATION_METHOD_PREFIX_TEMPLATE + this.summationsCounter;
 
     this.methodsSymbolTables.push(new SummationMethodSymbolTable(summationName, parentName));
     this.summationsCounter++;
