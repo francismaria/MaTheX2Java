@@ -4,7 +4,8 @@ const EmptyInputCodeError = require('errors/EmptyInputCodeError').EmptyInputCode
 
 jest.mock('TranslationExecution');
 
-const CLASSNAME_PREFIX = `GeneratedAmsmath`;
+const EMPTY_TEXT = "";
+const INPUT = "input";
 
 describe('TranslationExecutor test', () => {
   beforeEach(() => {
@@ -12,18 +13,16 @@ describe('TranslationExecutor test', () => {
   });
 
   test('when input is empty, exception is thrown', () => {
-    expect(() => TranslationExecutor.run("")).toThrow(EmptyInputCodeError);
+    expect(() => TranslationExecutor.run(EMPTY_TEXT)).toThrow(EmptyInputCodeError);
     expect(TranslationExecution).not.toHaveBeenCalled();
   });
 
   test('when valid input, TranslationExecution is called with correct values', () => {
-    const date = new Date();
-    const expectedClassNameGenerated = `${CLASSNAME_PREFIX}_${String(date.getDate())}_${String(date.getMonth() + 1)}_${String(date.getFullYear())}_${String(date.getHours())}`;
-    const classNameGeneratedRegex = new RegExp(`^${expectedClassNameGenerated}`, 'i');
+    const expectedClassNameRegex = buildExpectedGeneratedClassNamePrefixRegex();
     
-    TranslationExecutor.run("input");
+    TranslationExecutor.run(INPUT);
 
-    expect(TranslationExecution).toHaveBeenCalledWith("input", expect.stringMatching(classNameGeneratedRegex));
+    expect(TranslationExecution).toHaveBeenCalledWith(INPUT, expect.stringMatching(expectedClassNameRegex));
     expect(TranslationExecution).toHaveBeenCalledTimes(1);
   });
 
@@ -38,7 +37,16 @@ describe('TranslationExecutor test', () => {
       };
     });
 
-    expect(() => TranslationExecutor.run("input")).toThrow(Error);
+    expect(() => TranslationExecutor.run(INPUT)).toThrow(Error);
     expect(TranslationExecution).toHaveBeenCalledTimes(1);
   });
 });
+
+/**
+ * Builds expected generated classname prefix taking only into consideration
+ * @returns regex object
+ */
+function buildExpectedGeneratedClassNamePrefixRegex() {
+    const expectedClassNameGenerated = /^GeneratedAmsmath(_\d{1,2}){2}_\d{4}(_\d{1,2}){3}$/;
+    return new RegExp(expectedClassNameGenerated, 'g');
+}
