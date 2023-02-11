@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   mode: 'production',
   resolve: { 
-    extensions: ['.js'],
+    extensions: ['.js', '.ts'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     alias: {
       grammars: path.resolve(__dirname, 'src/grammars/'),
