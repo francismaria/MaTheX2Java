@@ -7,5 +7,5 @@ node_modules/
 # JEST coverage files
 coverage/
 
-# Webpack generated license file
-*.LICENSE.txt
+# Webpack generated bundle
+dist/

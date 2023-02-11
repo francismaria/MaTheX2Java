@@ -2,6 +2,15 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
   resolve: { 
     extensions: ['.js', '.ts'],
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -10,20 +19,20 @@ module.exports = {
       visitors: path.resolve(__dirname, 'src/visitors/'),
       structures: path.resolve(__dirname, 'src/structures/'),
       errors: path.resolve(__dirname, 'src/errors/'),
+      execution: path.resolve(__dirname, 'src/execution/'),
       java: path.resolve(__dirname, 'src/generator/'),
     },
     fallback: 
     { fs: false }
   },
-  entry: './src/TranslationExecutor.js',
+  entry: './src/index.ts',
   output: {
     filename: './dist/mathex2java.bundle.js',
     path: __dirname,
     library: {
       name: 'mathex2java',
-      type: 'var'
+      type: 'umd'
     },
-    libraryTarget: 'var'
   },
   performance: {
     maxEntrypointSize: 512000,

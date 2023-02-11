@@ -1,10 +1,10 @@
-const TranslationExecution = require('TranslationExecution').TranslationExecution;
+const TranslationExecution = require('execution/TranslationExecution').TranslationExecution;
 const EmptyInputCodeError = require('errors/EmptyInputCodeError').EmptyInputCodeError;
 
 const EMPTY = '';
 const FILENAME_PREFIX = 'GeneratedAmsmath';
 
-function getCurrentDate(date) {
+function getCurrentDate(date: Date) {
   return (`${String(date.getDate())}_${String(date.getMonth() + 1)}_${String(date.getFullYear())}_${String(date.getHours())}_${String(date.getMinutes())}_${String(date.getSeconds())}`);
 }
 
@@ -12,12 +12,12 @@ function generateFileName() {
   return `${FILENAME_PREFIX}_${getCurrentDate(new Date())}`;
 }
 
-function validateCode(code) {
+function validateCode(code: string) {
   if(code === EMPTY)
     throw new EmptyInputCodeError('Code input is empty.');
 }
 
-function startTranslationExecution(code) {
+function startTranslationExecution(code: string) {
   const fileName = generateFileName();
   const execution = new TranslationExecution(code, fileName);
   
@@ -27,7 +27,7 @@ function startTranslationExecution(code) {
   return execution.finalize();
 }
 
-function run(inputCode) {
+function run(inputCode: string) {
   let translatedCode;
 
   try {
