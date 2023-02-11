@@ -1,5 +1,7 @@
 node_modules/
+coverage/
 src/
 test/
 .gitignore
-webpack.config.json
+tsconfig.json
+webpack.config.js
