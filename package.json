@@ -1,8 +1,29 @@
 {
   "name": "mathex2java-translator",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Transpiler to convert amsmath LaTeX to Java code.",
-  "main": "dist/mathex2java.bundle.js",
+  "author": "Francisco Maria",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/francismaria/MaTheX2Java#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francismaria/MaTheX2Java.git"
+  },
+  "bugs": {
+    "url": "https://github.com/francismaria/MaTheX2Java/issues"
+  },
+  "keywords": [
+    "latex",
+    "mathex2java",
+    "java",
+    "transpiler",
+    "compiler",
+    "antlr4",
+    "languages",
+    "cfg"
+  ],
+  "main": "dist/mathex2java.js",
+  "types": "dist/mathex2java.d.ts",
   "directories": {
     "test": "tests"
   },
@@ -13,6 +34,16 @@
     "build-grammars": "java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Grammar.g4 -o ./src/grammars/static/AmsmathGrammar && java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Annotation.g4 -o ./src/grammars/static/AnnotationGrammar",
     "clean": "rm -rf node_modules/ package-lock.json",
     "prepublishOnly": "npm run test && npm run build"
+  },
+  "dependencies": {
+    "antlr4": "^4.7.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.5.0"
   },
   "jest": {
     "moduleDirectories": [
@@ -26,35 +57,5 @@
         "lines": 90
       }
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/francismaria/MaTheX2Java.git"
-  },
-  "keywords": [
-    "latex",
-    "mathex2java",
-    "java",
-    "transpiler",
-    "compiler",
-    "antlr4",
-    "languages",
-    "cfg"
-  ],
-  "author": "Francisco Maria",
-  "license": "GPL-2.0-or-later",
-  "bugs": {
-    "url": "https://github.com/francismaria/MaTheX2Java/issues"
-  },
-  "homepage": "https://github.com/francismaria/MaTheX2Java#readme",
-  "devDependencies": {
-    "jest": "^26.6.3",
-    "ts-loader": "^9.4.2",
-    "typescript": "^4.9.5",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^4.5.0"
-  },
-  "dependencies": {
-    "antlr4": "^4.7.2"
   }
 }
