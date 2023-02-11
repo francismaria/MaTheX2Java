@@ -27,7 +27,7 @@ module.exports = {
   },
   entry: './src/index.ts',
   output: {
-    filename: './dist/mathex2java.bundle.js',
+    filename: './dist/mathex2java.js',
     path: __dirname,
     library: {
       name: 'mathex2java',
