@@ -1,6 +1,6 @@
 {
   "name": "mathex2java-translator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Transpiler to convert amsmath LaTeX to Java code.",
   "main": "mathex2java.js",
   "directories": {
@@ -11,7 +11,8 @@
     "test-coverage": "jest --coverage",
     "build": "webpack",
     "build-grammars": "java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Grammar.g4 -o ./src/grammars/static/AmsmathGrammar && java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Annotation.g4 -o ./src/grammars/static/AnnotationGrammar",
-    "clean": "rm -rf node_modules/ package-lock.json"
+    "clean": "rm -rf node_modules/ package-lock.json",
+    "prepublishOnly": "npm run test && npm run build"
   },
   "jest": {
     "moduleDirectories": [
