@@ -27,7 +27,7 @@ function startTranslationExecution(code: string) {
   return execution.finalize();
 }
 
-function run(inputCode: string) {
+export function runTranslation(inputCode: string) {
   let translatedCode;
 
   try {
@@ -38,6 +38,4 @@ function run(inputCode: string) {
     throw error;
   }
   return translatedCode;
-}
-
-module.exports = { run };
+} 

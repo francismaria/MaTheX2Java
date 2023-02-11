@@ -1,6 +1,6 @@
 {
   "name": "mathex2java-translator",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Transpiler to convert amsmath LaTeX to Java code.",
   "author": "Francisco Maria",
   "license": "GPL-2.0-or-later",
