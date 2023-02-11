@@ -1,17 +1,17 @@
 {
   "name": "mathex2java-translator",
-  "version": "1.0.0",
-  "description": "Transpiler to convert amsmath LaTeX code to Java.",
+  "version": "1.1.0",
+  "description": "Transpiler to convert amsmath LaTeX to Java code.",
   "main": "mathex2java.js",
   "directories": {
-    "doc": "docs",
-    "example": "examples",
     "test": "tests"
   },
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "build": "webpack"
+    "build": "webpack",
+    "build-grammars": "java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Grammar.g4 -o ./src/grammars/static/AmsmathGrammar && java -Xmx500M -cp \"/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH\" org.antlr.v4.Tool -Dlanguage=JavaScript -visitor ./src/grammars/Annotation.g4 -o ./src/grammars/static/AnnotationGrammar",
+    "clean": "rm -rf node_modules/ package-lock.json"
   },
   "jest": {
     "moduleDirectories": [
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/francismaria/mathex2java-translator.git"
+    "url": "git+https://github.com/francismaria/MaTheX2Java.git"
   },
   "keywords": [
     "latex",
@@ -43,12 +43,14 @@
   "author": "Francisco Maria",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/francismaria/mathex2java-translator/issues"
+    "url": "https://github.com/francismaria/MaTheX2Java/issues"
   },
-  "homepage": "https://github.com/francismaria/mathex2java-translator#readme",
+  "homepage": "https://github.com/francismaria/MaTheX2Java#readme",
   "devDependencies": {
     "jest": "^26.6.3",
-    "webpack": "^5.27.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {

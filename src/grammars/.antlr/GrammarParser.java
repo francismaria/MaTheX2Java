@@ -1,4 +1,4 @@
-// Generated from /Users/francisco/Documents/FEUP/Projetos/COMP/Math2Code/generation/grammars/Grammar.g4 by ANTLR 4.7.1
+// Generated from /Users/francisco/Documents/Work/mathex2java-translator/src/grammars/Grammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class GrammarParser extends Parser {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -54,51 +54,61 @@ public class GrammarParser extends Parser {
 		RULE_sqrt = 72, RULE_sqrt_root = 73, RULE_sqrt_body = 74, RULE_exponential = 75, 
 		RULE_fraction = 76, RULE_numerator = 77, RULE_denominator = 78, RULE_fraction_member = 79, 
 		RULE_end = 80, RULE_environment = 81;
-	public static final String[] ruleNames = {
-		"chat", "start", "begin", "body", "equation", "matrix", "matrix_line", 
-		"math_function", "math_function_def", "math_function_args", "operator", 
-		"lesser_operator", "lesser_equal_operator", "greater_operator", "greater_equal_operator", 
-		"composed_operations", "operation_element", "base_member", "power_member", 
-		"priority_element", "member", "variable", "variable_lower_index", "index_elements", 
-		"index_element", "integer", "integer_positive_zero", "integer_negative", 
-		"double_type", "double_positive_zero", "double_negative", "factorial", 
-		"single_argument_factorial", "complex_argument_factorial", "factorial_element", 
-		"integral", "single_integral", "double_integral", "triple_integral", "integral_def", 
-		"integral_lower_limit", "integral_upper_limit", "integral_body", "trigonometry", 
-		"normal", "inverse", "hyperbolic", "sin", "cos", "tan", "arcsin", "arccos", 
-		"arctan", "sinh", "cosh", "tanh", "trigonometric_function_args", "trigonometric_function_power", 
-		"summation", "summation_lower_bound", "summation_lower_body", "summation_lower_single_line", 
-		"summation_lower_bound_operators", "summation_lower_multiple_line", "summation_upper_bound", 
-		"summation_upper_body", "summation_body", "logarithm", "log", "ln", "logarithm_lower_bound", 
-		"logarithm_body", "sqrt", "sqrt_root", "sqrt_body", "exponential", "fraction", 
-		"numerator", "denominator", "fraction_member", "end", "environment"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"chat", "start", "begin", "body", "equation", "matrix", "matrix_line", 
+			"math_function", "math_function_def", "math_function_args", "operator", 
+			"lesser_operator", "lesser_equal_operator", "greater_operator", "greater_equal_operator", 
+			"composed_operations", "operation_element", "base_member", "power_member", 
+			"priority_element", "member", "variable", "variable_lower_index", "index_elements", 
+			"index_element", "integer", "integer_positive_zero", "integer_negative", 
+			"double_type", "double_positive_zero", "double_negative", "factorial", 
+			"single_argument_factorial", "complex_argument_factorial", "factorial_element", 
+			"integral", "single_integral", "double_integral", "triple_integral", 
+			"integral_def", "integral_lower_limit", "integral_upper_limit", "integral_body", 
+			"trigonometry", "normal", "inverse", "hyperbolic", "sin", "cos", "tan", 
+			"arcsin", "arccos", "arctan", "sinh", "cosh", "tanh", "trigonometric_function_args", 
+			"trigonometric_function_power", "summation", "summation_lower_bound", 
+			"summation_lower_body", "summation_lower_single_line", "summation_lower_bound_operators", 
+			"summation_lower_multiple_line", "summation_upper_bound", "summation_upper_body", 
+			"summation_body", "logarithm", "log", "ln", "logarithm_lower_bound", 
+			"logarithm_body", "sqrt", "sqrt_root", "sqrt_body", "exponential", "fraction", 
+			"numerator", "denominator", "fraction_member", "end", "environment"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'\\exp'", "'\\frac'", "'\\sqrt'", "'\\sum'", "'\\infty'", "'\\substack'", 
-		"'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", "'\\arccos'", "'\\arctan'", 
-		"'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", "'\\ln'", "'\\int'", "'\\iint'", 
-		"'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", "'\\le'", "'\\leq'", "'\\leqq'", 
-		"'\\leqslant'", "'\\gt'", "'\\gneq'", "'\\gneqq'", "'\\geq'", "'\\geqq'", 
-		"'\\geqslant'", "'\\begin'", "'\\end'", "'equation'", "'equation*'", "'matrix'", 
-		"'<'", "'<='", "'>'", "'>='", "'!'", "'&'", "'{'", "'}'", "'_'", "'\\\\'", 
-		"'e'", "'['", "']'", "'('", "')'", "'^'", "','", null, "'='", null, null, 
-		"'+'", "'-'", null, "'/'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", 
-		"SUBSTACK_TAG", "SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", 
-		"ARCTAN_TAG", "SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", 
-		"INT_TAG", "IINT_TAG", "IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", 
-		"LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", 
-		"GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", "BEGIN", "END", "EQUATION", 
-		"EQUATION_STAR", "MATRIX", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", 
-		"GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", 
-		"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", 
-		"PARENTHESIS_LF", "PARENTHESIS_RT", "HAT", "COMMA", "VARNAME", "EQUAL", 
-		"INTEGER", "DOUBLE", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "NEWLINE_TAG", 
-		"COMMENT", "WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'\\exp'", "'\\frac'", "'\\sqrt'", "'\\sum'", "'\\infty'", "'\\substack'", 
+			"'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", "'\\arccos'", "'\\arctan'", 
+			"'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", "'\\ln'", "'\\int'", "'\\iint'", 
+			"'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", "'\\le'", "'\\leq'", 
+			"'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", "'\\gneqq'", "'\\geq'", 
+			"'\\geqq'", "'\\geqslant'", "'\\begin'", "'\\end'", "'equation'", "'equation*'", 
+			"'matrix'", "'<'", "'<='", "'>'", "'>='", "'!'", "'&'", "'{'", "'}'", 
+			"'_'", "'\\\\'", "'e'", "'['", "']'", "'('", "')'", "'^'", "','", null, 
+			"'='", null, null, "'+'", "'-'", null, "'/'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", 
+			"SUBSTACK_TAG", "SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", 
+			"ARCTAN_TAG", "SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", 
+			"INT_TAG", "IINT_TAG", "IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", 
+			"LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", 
+			"GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", "BEGIN", "END", "EQUATION", 
+			"EQUATION_STAR", "MATRIX", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", 
+			"GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", 
+			"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", 
+			"PARENTHESIS_LF", "PARENTHESIS_RT", "HAT", "COMMA", "VARNAME", "EQUAL", 
+			"INTEGER", "DOUBLE", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "NEWLINE_TAG", 
+			"COMMENT", "WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -148,6 +158,7 @@ public class GrammarParser extends Parser {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
+
 	public static class ChatContext extends ParserRuleContext {
 		public TerminalNode EOF() { return getToken(GrammarParser.EOF, 0); }
 		public List<StartContext> start() {

@@ -1,4 +1,4 @@
-// Generated from /Users/francisco/Documents/FEUP/Projetos/COMP/Math2Code/generation/grammars/Grammar.g4 by ANTLR 4.7.1
+// Generated from /Users/francisco/Documents/Work/mathex2java-translator/src/grammars/Grammar.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class GrammarLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -36,46 +36,55 @@ public class GrammarLexer extends Lexer {
 		"DEFAULT_MODE"
 	};
 
-	public static final String[] ruleNames = {
-		"EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", "SUBSTACK_TAG", 
-		"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
-		"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
-		"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", "LEQQ_TAG", 
-		"LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", 
-		"GEQSLANT_TAG", "BEGIN", "END", "EQUATION", "EQUATION_STAR", "MATRIX", 
-		"LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", 
-		"FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", "UNDERSCORE", "BREAKLINE", 
-		"EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", "PARENTHESIS_LF", "PARENTHESIS_RT", 
-		"HAT", "COMMA", "VARNAME", "EQUAL", "INTEGER", "DOUBLE", "PLUS", "MINUS", 
-		"MULTIPLICATION", "MULTIPLICATION_TAGS", "DIVISION", "NEWLINE_TAG", "NEWLINE", 
-		"COMMENT", "WS"
-	};
+	private static String[] makeRuleNames() {
+		return new String[] {
+			"EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", "SUBSTACK_TAG", 
+			"SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", "ARCTAN_TAG", 
+			"SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", "INT_TAG", "IINT_TAG", 
+			"IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", "LE_TAG", "LEQ_TAG", 
+			"LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", "GNEQQ_TAG", "GEQ_TAG", 
+			"GEQQ_TAG", "GEQSLANT_TAG", "BEGIN", "END", "EQUATION", "EQUATION_STAR", 
+			"MATRIX", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", "GREATER_EQUAL_SYMBOL", 
+			"FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", "UNDERSCORE", "BREAKLINE", 
+			"EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", "PARENTHESIS_LF", "PARENTHESIS_RT", 
+			"HAT", "COMMA", "VARNAME", "EQUAL", "INTEGER", "DOUBLE", "PLUS", "MINUS", 
+			"MULTIPLICATION", "MULTIPLICATION_TAGS", "DIVISION", "NEWLINE_TAG", "NEWLINE", 
+			"COMMENT", "WS"
+		};
+	}
+	public static final String[] ruleNames = makeRuleNames();
 
-	private static final String[] _LITERAL_NAMES = {
-		null, "'\\exp'", "'\\frac'", "'\\sqrt'", "'\\sum'", "'\\infty'", "'\\substack'", 
-		"'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", "'\\arccos'", "'\\arctan'", 
-		"'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", "'\\ln'", "'\\int'", "'\\iint'", 
-		"'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", "'\\le'", "'\\leq'", "'\\leqq'", 
-		"'\\leqslant'", "'\\gt'", "'\\gneq'", "'\\gneqq'", "'\\geq'", "'\\geqq'", 
-		"'\\geqslant'", "'\\begin'", "'\\end'", "'equation'", "'equation*'", "'matrix'", 
-		"'<'", "'<='", "'>'", "'>='", "'!'", "'&'", "'{'", "'}'", "'_'", "'\\\\'", 
-		"'e'", "'['", "']'", "'('", "')'", "'^'", "','", null, "'='", null, null, 
-		"'+'", "'-'", null, "'/'"
-	};
-	private static final String[] _SYMBOLIC_NAMES = {
-		null, "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", 
-		"SUBSTACK_TAG", "SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", 
-		"ARCTAN_TAG", "SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", 
-		"INT_TAG", "IINT_TAG", "IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", 
-		"LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", 
-		"GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", "BEGIN", "END", "EQUATION", 
-		"EQUATION_STAR", "MATRIX", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", 
-		"GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", 
-		"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", 
-		"PARENTHESIS_LF", "PARENTHESIS_RT", "HAT", "COMMA", "VARNAME", "EQUAL", 
-		"INTEGER", "DOUBLE", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "NEWLINE_TAG", 
-		"COMMENT", "WS"
-	};
+	private static String[] makeLiteralNames() {
+		return new String[] {
+			null, "'\\exp'", "'\\frac'", "'\\sqrt'", "'\\sum'", "'\\infty'", "'\\substack'", 
+			"'\\sin'", "'\\cos'", "'\\tan'", "'\\arcsin'", "'\\arccos'", "'\\arctan'", 
+			"'\\sinh'", "'\\cosh'", "'\\tanh'", "'\\log'", "'\\ln'", "'\\int'", "'\\iint'", 
+			"'\\iiint'", "'\\lt'", "'\\lneq'", "'\\lneqq'", "'\\le'", "'\\leq'", 
+			"'\\leqq'", "'\\leqslant'", "'\\gt'", "'\\gneq'", "'\\gneqq'", "'\\geq'", 
+			"'\\geqq'", "'\\geqslant'", "'\\begin'", "'\\end'", "'equation'", "'equation*'", 
+			"'matrix'", "'<'", "'<='", "'>'", "'>='", "'!'", "'&'", "'{'", "'}'", 
+			"'_'", "'\\\\'", "'e'", "'['", "']'", "'('", "')'", "'^'", "','", null, 
+			"'='", null, null, "'+'", "'-'", null, "'/'"
+		};
+	}
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static String[] makeSymbolicNames() {
+		return new String[] {
+			null, "EXP_TAG", "FRAC_TAG", "SQRT_TAG", "SUMMATION_TAG", "INFINITY_TAG", 
+			"SUBSTACK_TAG", "SIN_TAG", "COS_TAG", "TAN_TAG", "ARCSIN_TAG", "ARCCOS_TAG", 
+			"ARCTAN_TAG", "SINH_TAG", "COSH_TAG", "TANH_TAG", "LOG_TAG", "LN_TAG", 
+			"INT_TAG", "IINT_TAG", "IIINT_TAG", "LT_TAG", "LNEQ_TAG", "LNEQQ_TAG", 
+			"LE_TAG", "LEQ_TAG", "LEQQ_TAG", "LEQSLANT_TAG", "GT_TAG", "GNEQ_TAG", 
+			"GNEQQ_TAG", "GEQ_TAG", "GEQQ_TAG", "GEQSLANT_TAG", "BEGIN", "END", "EQUATION", 
+			"EQUATION_STAR", "MATRIX", "LESSER_SYMBOL", "LESS_EQUAL_SYMBOL", "GREATER_SYMBOL", 
+			"GREATER_EQUAL_SYMBOL", "FACTORIAL_SYMBOL", "JOIN", "CURLY_LF", "CURLY_RT", 
+			"UNDERSCORE", "BREAKLINE", "EULER_NUMBER", "BRACKET_LF", "BRACKET_RT", 
+			"PARENTHESIS_LF", "PARENTHESIS_RT", "HAT", "COMMA", "VARNAME", "EQUAL", 
+			"INTEGER", "DOUBLE", "PLUS", "MINUS", "MULTIPLICATION", "DIVISION", "NEWLINE_TAG", 
+			"COMMENT", "WS"
+		};
+	}
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
