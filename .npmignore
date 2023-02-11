@@ -2,6 +2,7 @@ node_modules/
 coverage/
 src/
 test/
+.github
 .gitignore
 tsconfig.json
 webpack.config.js
